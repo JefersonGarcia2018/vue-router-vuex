@@ -28,5 +28,5 @@ Ao rodar o projeto, inicialmente, será apresentada a página de Login, na qual 
 
 ## Imagnes do Projeto
 <div>
-	<img src="@/assets/login01.png" alt="" width="72" height="72">
+<img src="https://user-images.githubusercontent.com/40130224/156477588-122680c1-16f9-46dc-aaf7-87a092ad9572.png" alt="login">
 </div>
