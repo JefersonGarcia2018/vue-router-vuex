@@ -1,25 +1,65 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+
+import HomeInterna from '@/views/PagesInternas/HomeInterna';
+import Produtos from '@/views/PagesInternas/Produtos/Produtos';
+import Login from '@/views/PagesExternas/Login';
+import Register from '@/views/PagesExternas/Register';
+
+import Authentication from './middleware/authentication';
 
 const routes = [
+
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    component: () => import(/* webpackChunkName: "about" */ '@/views/PagesInternas/TemplateInterno.vue'),
+    children: [
+
+      {
+        path: '/',
+        name: 'HomeInterna',
+        component: HomeInterna,
+        meta: {
+          authenticated: true,
+        },
+      },
+      {
+        path: '/produtos',
+        name: 'Produtos',
+        component: Produtos,
+        meta: {
+          authenticated: true,
+        },
+      },
+    ],
+
   },
+
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/',
+    component: () => import(/* webpackChunkName: "about" */ '@/views/PagesExternas/TemplateExterno.vue'),
+    children: [
+
+      {
+        path: '/login',
+        name: 'Login',
+        component: Login,
+      },
+      {
+        path: '/register',
+        name: 'Register',
+        component: Register,
+      },
+    ],
+
   },
+
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+router.beforeEach(Authentication);
 
 export default router;
