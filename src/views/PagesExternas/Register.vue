@@ -37,7 +37,7 @@
       {{errors.passwordError}}
     </div>
 
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar</button>
     <p class="text-center">Já é cadastrado? <router-link to="/login">Faça Login</router-link></p>
   </form>
 
