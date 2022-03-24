@@ -3,7 +3,7 @@
 
 # Projeto Prático de Vue JS + Bootstrap + VueRouter + Vuex
 
-> Exemplo básico Vue JS com implementação de rotas com autenticação, com páginas-Externas para usuários não-autenticados e páginas-Internas para usuários autenticados, e com páginas/formulários de Login e Registro de usuários, páginas internas Home e Produtos. Na página de produtos tem a parte de listagem de produtoa e a parte de cadastrar e editar produtos. Foi utilizado sessionStorage para armazenar os dados.
+> Exemplo básico Vue JS com implementação de rotas com autenticação, com páginas-Externas para usuários não-autenticados e páginas-Internas para usuários autenticados, e com páginas/formulários de Login e Registro de usuários, páginas internas Home e Produtos. Na página de produtos tem a parte de listagem de produtos e a parte de cadastrar e editar produtos. Foi utilizado sessionStorage para armazenar os dados.
 
 ## Baixar o projeto
 Primeiro passo, clonar o projeto:
