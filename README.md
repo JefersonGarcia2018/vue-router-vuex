@@ -9,7 +9,7 @@
 Primeiro passo, clonar o projeto:
 ``` bash
 # Clonar
-git clone https://github.com/JefersonGarcia2018/vue-router-vuex
+git clone https://github.com/JefersonGarcia2018/vue-router-vuex.git
 
 # Acessar
 cd vue-router-vuex
